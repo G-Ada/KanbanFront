@@ -1,0 +1,22 @@
+{
+    "tasks": [
+        {
+            "title": "Tarea",
+            "description": "Lore impsum",
+            "responsible": "Mark",
+            "priority": "baja"
+        },
+        {
+            "title": "Tarea 2",
+            "description": "Lore impsum 2",
+            "responsible": "Rose",
+            "priority": "media"
+        },
+        {
+            "title": "Tarea 3",
+            "description": "Lore impsum 3",
+            "responsible": "Tom",
+            "priority": "alta"
+        }
+    ]
+}
