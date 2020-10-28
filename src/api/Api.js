@@ -22,7 +22,6 @@ const Api = {
     },
     loginUser: async (form) => {
         let user = JSON.stringify(form)
-        console.log(user)
         try {
             const found = await fetch(`${API_URL}/login`, {
                 method: "POST",
@@ -31,7 +30,6 @@ const Api = {
                 headers: { 'Content-Type': 'application/json' }
             })
             const json = await found.json()
-            console.log(found.status)
             if(found.status === 401){
                 return ({status: found.status, message: json.error})
             } else {

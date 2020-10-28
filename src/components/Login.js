@@ -26,9 +26,8 @@ class Login extends React.Component {
             this.setState({ error: true, message: 'Hubo un error, vuelve a intentarlo' })
         }
         else {
-            // let newUser = {userName: user.userName, clave: user.clave}
-            // console.log(newUser)
-            // let login = await Api.loginUser(newUser)
+            let newUser = {userName: user.userName, clave: user.clave}
+            let login = await Api.loginUser(newUser)
             this.setState({redirect: true})
         }
     }
@@ -41,8 +40,9 @@ class Login extends React.Component {
             this.setState({ error: true, message: message })
         } else if (status == 500) {
             this.setState({ error: true, message: 'Hubo un error, vuelve a intentarlo' })
+        } else {
+            this.setState({redirect: true})
         }
-        console.log(login)
     }
 
     renderRedirect = () => {
